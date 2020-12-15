@@ -1,3 +1,4 @@
+
 <div class="ui secondary menu">
   <a class="active item">
     Home
@@ -21,6 +22,30 @@
   </div>
 </div>
 
+<div class="ui cards center">
+<% @art.each_with_index do |thing, i| %>
+  <div class="ui card">
+    <div class="image">
+      <% path = (i+1).to_s + ".jpg" %>
+      <%= image_tag path %>
+   </div>
+    <div class="content">
+      <a class="header"><%= thing.title %></a>
+      <div class="meta">
+        <span class="date"><%= thing.creator %></span>
+      </div>
+      <div class="description">
+        <!-- Description goes here -->
+      </div>
+    </div>
+    <!-- <div class="extra content">
+      <a>
+        <i class="icon"></i>
+      </a>
+    </div> -->
+  </div>
+<% end %>
+</div>
 
 
 <div class="ui raised very padded text container segment">
