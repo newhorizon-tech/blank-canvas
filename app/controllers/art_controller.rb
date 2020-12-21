@@ -1,5 +1,11 @@
 class ArtController < ApplicationController
    def index
-     @art = Art.all
+     @arts = Art.all
+   end
+
+   def new
+     @art = Art.new
+   end
+   def create
    end
 end
