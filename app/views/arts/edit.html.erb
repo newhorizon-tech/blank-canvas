@@ -1,0 +1,14 @@
+<%= form_with url: art_path do |f| %>
+  <p>
+    <%= f.label :title, 'Title' %>
+    <%= f.string_field :title %>
+  </p>
+  <p>
+    <%= f.label :creator, 'Painting Name' %>
+    <%= f.string_field :creator %>
+  </p>
+  <p>
+    <%= f.label :image, 'Upload Art' %>
+    <%= f.file_field :image %>
+  </p>
+<% end %>

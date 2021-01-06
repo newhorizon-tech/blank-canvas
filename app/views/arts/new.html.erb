@@ -1,0 +1,15 @@
+<%= form_with model: @art do |f| %>
+  <p>
+    <%= f.label :title, 'Title' %>
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :creator, 'Artist' %>
+    <%= f.text_field :creator %>
+  </p>
+  <p>
+    <%= f.label :image, 'Upload Art' %>
+    <%= f.file_field :image %>
+  </p>
+  <%= f.submit %>
+<% end %>

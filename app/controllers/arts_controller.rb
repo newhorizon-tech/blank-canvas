@@ -1,4 +1,4 @@
-class ArtController < ApplicationController
+class ArtsController < ApplicationController
    def index
      @arts = Art.all
    end
@@ -6,6 +6,9 @@ class ArtController < ApplicationController
    def new
      @art = Art.new
    end
+   
    def create
+     @art = Art.new(params)
+     @art.save
    end
 end
