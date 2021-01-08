@@ -1,25 +1,14 @@
-<div class="ui secondary menu">
-  <a class="item">
-    Home
-  </a>
-  <div class=" yellow right menu">
-    <a class="ui item">
-      Logout
-    </a>
-  </div>
-</div>
 
-<div class="ui cards center">
-<% @arts.each_with_index do |thing, i| %>
+<div class="ui container cards center">
+<% @arts.each_with_index do |art, i| %>
   <div class="ui card">
     <div class="image">
-      <% path = (i+1).to_s + ".png" %>
-      <%= image_tag path %>
+      <%= image_tag url_for(art.image) %>
    </div>
     <div class="content">
-      <a class="header"><%= thing.title %></a>
+      <a class="header"><%= art.title %></a>
       <div class="meta">
-        <span class="date"><%= thing.creator %></span>
+        <span class="date"><%= art.creator %></span>
       </div>
       <div class="description">
         <!-- Description goes here -->

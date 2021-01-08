@@ -1,15 +1,20 @@
-<%= form_with model: @art do |f| %>
-  <p>
-    <%= f.label :title, 'Title' %>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :creator, 'Artist' %>
-    <%= f.text_field :creator %>
-  </p>
-  <p>
-    <%= f.label :image, 'Upload Art' %>
-    <%= f.file_field :image %>
-  </p>
-  <%= f.submit %>
-<% end %>
+<div class="ui container">
+  <div class="ui column">
+    <h2 class="ui blue header">Art Details</h2>
+    <%= form_with model: @art, class: 'ui form' do |f| %>
+    <div class="inline field">
+      <%= f.label :title, 'Title' %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="inline field">
+      <%= f.label :creator, 'Artist' %>
+      <%= f.text_field :creator %>
+    </div>
+    <div class="inline field">
+      <%= f.label :image, 'Upload Art' %>
+      <%= f.file_field :image %>
+    </div>
+    <%= f.submit  value: 'Upload Art', class: 'ui blue large submit button' %>
+  <% end %>
+</div>
+</div>
