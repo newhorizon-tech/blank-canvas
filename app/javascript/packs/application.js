@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
+import './index'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
